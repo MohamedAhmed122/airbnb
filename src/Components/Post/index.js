@@ -2,10 +2,10 @@ import React from 'react';
 import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import {primary, lightGray, gray} from '../../Config/colors';
 
-export default function Post({items}) {
+export default function Post({items, onPress}) {
   console.log(items);
   return (
-    <TouchableOpacity style={styles.container}>
+    <TouchableOpacity style={styles.container} onPress={onPress}>
       <Image
         source={{uri: items.image}}
         style={styles.img}
