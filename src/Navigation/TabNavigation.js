@@ -5,10 +5,10 @@ import Entypo from 'react-native-vector-icons/Entypo';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {primary} from '../Config/colors';
 import HomeScreen from '../Screen/HomeScreen';
-import RentScreen from '../Screen/RentScreen';
 import SearchScreen from '../Screen/SearchScreen';
 import RentNavigation from './RentNavigation';
 import GuestScreen from '../Screen/GuestScreen';
+import HomeNavigation from './HomeNavigation';
 
 const Tab = createBottomTabNavigator();
 
@@ -21,7 +21,7 @@ export default function TabNavigation() {
       }}>
       <Tab.Screen
         name="Explore"
-        component={HomeScreen}
+        component={HomeNavigation}
         options={{
           tabBarIcon: ({color, size}) => (
             <Fontsito name="search" size={size} color={color} />

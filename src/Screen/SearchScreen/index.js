@@ -7,7 +7,7 @@ import SearchResult from '../../Components/SearchResult';
 import items from '../../Assets/data/search';
 import {lightGray} from '../../Config/colors';
 
-export default function SearchScreen() {
+export default function SearchScreen({navigation}) {
   const [textInput, setTextInput] = useState('');
 
   return (
@@ -24,7 +24,12 @@ export default function SearchScreen() {
       <FlatList
         data={items}
         keyExtractor={items => items.id.toString()}
-        renderItem={({item}) => <SearchResult items={item} />}
+        renderItem={({item}) => (
+          <SearchResult
+            items={item}
+            onPress={() => navigation.navigate('GuestScreens')}
+          />
+        )}
       />
     </View>
   );
@@ -32,7 +37,6 @@ export default function SearchScreen() {
 
 const styles = StyleSheet.create({
   inputContainer: {
-    marginTop: 40,
     width: '100%',
     height: 50,
     flexDirection: 'row',

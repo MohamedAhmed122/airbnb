@@ -38,9 +38,9 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    margin: 20,
+    margin: 16,
     borderBottomWidth: 2,
-    paddingBottom: 15,
+    paddingBottom: 20,
     borderBottomColor: lightGray,
   },
   type: {

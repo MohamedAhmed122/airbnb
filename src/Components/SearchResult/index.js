@@ -3,9 +3,9 @@ import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import EnTypo from 'react-native-vector-icons/Entypo';
 import {lightGray} from '../../Config/colors';
 
-export default function SearchResult({items}) {
+export default function SearchResult({items, onPress}) {
   return (
-    <TouchableOpacity style={styles.container}>
+    <TouchableOpacity style={styles.container} onPress={onPress}>
       <View style={styles.icon}>
         <EnTypo name="location-pin" size={40} />
       </View>

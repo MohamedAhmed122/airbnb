@@ -3,19 +3,23 @@ import {ImageBackground, Pressable, StyleSheet, Text} from 'react-native';
 import Fontsito from 'react-native-vector-icons/Fontisto';
 import {white, black, primary} from '../../Config/colors';
 
-export default function HomeScreen() {
+export default function HomeScreen({navigation}) {
   return (
     <ImageBackground
       source={require('./wallpaper.jpg')}
       style={styles.image}
       resizeMode="cover">
-      <Pressable style={styles.searchBtn}>
+      <Pressable
+        style={styles.searchBtn}
+        onPress={() => navigation.navigate('SearchScreens')}>
         <Fontsito name="search" color={primary} size={25} />
         <Text style={styles.searchBtnText}>where are you going?</Text>
       </Pressable>
       <Text style={styles.title}>GO</Text>
       <Text style={styles.title2}>Near</Text>
-      <Pressable style={styles.btn}>
+      <Pressable
+        style={styles.btn}
+        onPress={() => navigation.navigate('SearchScreens')}>
         <Text style={styles.btnText}>Explore Nearby stays</Text>
       </Pressable>
     </ImageBackground>
