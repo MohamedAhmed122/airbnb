@@ -4,7 +4,6 @@ import AntDesign from 'react-native-vector-icons/AntDesign';
 import Entypo from 'react-native-vector-icons/Entypo';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {primary} from '../Config/colors';
-import HomeScreen from '../Screen/HomeScreen';
 import SearchScreen from '../Screen/SearchScreen';
 import RentNavigation from './RentNavigation';
 import GuestScreen from '../Screen/GuestScreen';

@@ -3,8 +3,9 @@ import React from 'react';
 import {useState} from 'react';
 import {View} from 'react-native';
 import Guest from '../../Components/Guest';
+import AppButton from '../../Components/AppButton/AppButton';
 
-export default function GuestScreen() {
+export default function GuestScreen({navigation}) {
   const [adultsValue, setAdultsValue] = useState(0);
   const [childrenValue, setChildrenValue] = useState(0);
   const [infantsValue, setInfantsValue] = useState(0);
@@ -29,6 +30,12 @@ export default function GuestScreen() {
         value={infantsValue}
         setValue={setInfantsValue}
       />
+      <View style={{marginTop: 50}}>
+        <AppButton
+          title="Search"
+          onPress={() => navigation.navigate('RentScreens')}
+        />
+      </View>
     </View>
   );
 }

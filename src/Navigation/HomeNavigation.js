@@ -4,6 +4,8 @@ import HomeScreen from '../Screen/HomeScreen';
 import SearchScreen from '../Screen/SearchScreen';
 import GuestScreen from '../Screen/GuestScreen';
 import {primary} from '../Config/colors';
+import RentNavigation from './RentNavigation';
+import ShowScreen from '../Screen/ShowScreen/ShowScreen';
 
 const Stack = createStackNavigator();
 
@@ -27,6 +29,11 @@ export default function HomeNavigation() {
       <Stack.Screen
         component={GuestScreen}
         name="GuestScreens"
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        component={RentNavigation}
+        name="RentScreens"
         options={{headerShown: false}}
       />
     </Stack.Navigator>
