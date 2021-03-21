@@ -8,6 +8,7 @@ import HomeScreen from '../Screen/HomeScreen';
 import RentScreen from '../Screen/RentScreen';
 import SearchScreen from '../Screen/SearchScreen';
 import RentNavigation from './RentNavigation';
+import GuestScreen from '../Screen/GuestScreen';
 
 const Tab = createBottomTabNavigator();
 
@@ -56,7 +57,7 @@ export default function TabNavigation() {
       />
       <Tab.Screen
         name="Profile"
-        component={RentScreen}
+        component={GuestScreen}
         options={{
           tabBarIcon: ({color, size}) => (
             <Entypo name="user" size={size} color={color} />
