@@ -6,18 +6,15 @@ import RentScreen from './src/Screen/RentScreen';
 import SearchScreen from './src/Screen/SearchScreen';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
+import TabNavigation from './src/Navigation/TabNavigation';
 
 const Stack = createStackNavigator();
 
 const App = () => {
   return (
     <>
-      {/* <StatusBar barStyle={'dark-content'} />
-      <SearchScreen /> */}
       <NavigationContainer>
-        <Stack.Navigator>
-          <Stack.Screen name="Home" component={HomeScreen} />
-        </Stack.Navigator>
+        <TabNavigation />
       </NavigationContainer>
     </>
   );
