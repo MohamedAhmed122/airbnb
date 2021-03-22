@@ -5,7 +5,7 @@ import AntDesign from 'react-native-vector-icons/AntDesign';
 import {useDispatch} from 'react-redux';
 import {addItemToCart} from '../../Redux/Cart/CartAction';
 
-export default function Post({items, onPress}) {
+export default function Post({items, onPress, inverted = true}) {
   const [heartIcon, setHeartIcon] = useState(false);
   const dispatch = useDispatch();
 
@@ -16,16 +16,18 @@ export default function Post({items, onPress}) {
         style={styles.img}
         resizeMode="cover"
       />
-      <AntDesign
-        style={styles.icon}
-        name={!heartIcon ? 'hearto' : 'heart'}
-        size={30}
-        color={primary}
-        onPress={() => {
-          setHeartIcon(!heartIcon);
-          dispatch(addItemToCart(items));
-        }}
-      />
+      {inverted && (
+        <AntDesign
+          style={styles.icon}
+          name={!heartIcon ? 'hearto' : 'heart'}
+          size={30}
+          color={primary}
+          onPress={() => {
+            setHeartIcon(!heartIcon);
+            dispatch(addItemToCart(items));
+          }}
+        />
+      )}
       <View style={styles.contain}>
         <Text style={styles.subTitle}>{items.type} </Text>
         <Text style={styles.prize}>${items.totalPrice}</Text>
