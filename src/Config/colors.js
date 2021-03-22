@@ -6,4 +6,6 @@ export const primary = '#f15454';
 
 export const lightGray = '#eaeaea';
 
-export const gray = 'gray';
+export const lightGrayPlus = '#dfdede';
+
+export const gray = '#828282';

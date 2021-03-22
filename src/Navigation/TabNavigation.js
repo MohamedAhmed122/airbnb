@@ -9,6 +9,7 @@ import RentNavigation from './RentNavigation';
 import GuestScreen from '../Screen/GuestScreen';
 import HomeNavigation from './HomeNavigation';
 import SavedScreen from '../Screen/SavedScreen';
+import ChatScreen from '../Screen/ChatScreen';
 
 const Tab = createBottomTabNavigator();
 
@@ -48,7 +49,7 @@ export default function TabNavigation() {
       />
       <Tab.Screen
         name="Chat"
-        component={SearchScreen}
+        component={ChatScreen}
         options={{
           tabBarIcon: ({color, size}) => (
             <Entypo name="chat" size={size} color={color} />
