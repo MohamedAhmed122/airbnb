@@ -11,6 +11,7 @@ import {primary} from '../Config/colors';
 import Fontsito from 'react-native-vector-icons/Fontisto';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import Entypo from 'react-native-vector-icons/Entypo';
+import AuthScreen from '../Screen/AurthScreen';
 
 const Tab = createBottomTabNavigator();
 
@@ -67,7 +68,7 @@ export default function TabNavigation() {
       />
       <Tab.Screen
         name="Profile"
-        component={RentNavigation}
+        component={AuthScreen}
         options={{
           tabBarIcon: ({color, size}) => (
             <Entypo name="user" size={size} color={color} />

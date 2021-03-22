@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet, Text, View, TouchableWithoutFeedback} from 'react-native';
+import {StyleSheet, Text, View} from 'react-native';
 import {primary, white} from '../../Config/colors';
 
 export default function Message() {
@@ -13,7 +13,7 @@ export default function Message() {
       <View style={styles.containerRight}>
         <View style={styles.messageReceiver}>
           <Text style={styles.textReceiver}>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Lorem, ipsum dolor sit amet consectetur adipisicin.
           </Text>
         </View>
       </View>

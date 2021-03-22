@@ -1,5 +1,7 @@
+/* eslint-disable react-native/no-inline-styles */
 import React from 'react';
 import {Image, StyleSheet, Text, View} from 'react-native';
+import AppButton from '../../Components/AppButton/AppButton';
 import {gray, primary} from '../../Config/colors';
 
 export default function RentDetails({route}) {
@@ -20,6 +22,9 @@ export default function RentDetails({route}) {
         {item.bed} Bed - {item.bedroom} Bedroom
       </Text>
       <Text style={styles.des}>{item.title}</Text>
+      <View style={{marginTop: 40}}>
+        <AppButton title="Book Now" />
+      </View>
     </View>
   );
 }
