@@ -8,6 +8,7 @@ import SearchScreen from '../Screen/SearchScreen';
 import RentNavigation from './RentNavigation';
 import GuestScreen from '../Screen/GuestScreen';
 import HomeNavigation from './HomeNavigation';
+import SavedScreen from '../Screen/SavedScreen';
 
 const Tab = createBottomTabNavigator();
 
@@ -29,7 +30,7 @@ export default function TabNavigation() {
       />
       <Tab.Screen
         name="Saved"
-        component={RentNavigation}
+        component={SavedScreen}
         options={{
           tabBarIcon: ({color, size}) => (
             <AntDesign name="hearto" size={size} color={color} />

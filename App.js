@@ -3,14 +3,17 @@ import React from 'react';
 import {StyleSheet} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import TabNavigation from './src/Navigation/TabNavigation';
+import {Provider} from 'react-redux';
+
+import {store} from './src/Redux/store';
 
 const App = () => {
   return (
-    <>
+    <Provider store={store}>
       <NavigationContainer>
         <TabNavigation />
       </NavigationContainer>
-    </>
+    </Provider>
   );
 };
 

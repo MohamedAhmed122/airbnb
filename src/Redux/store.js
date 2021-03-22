@@ -4,8 +4,6 @@ import thunk from 'redux-thunk';
 
 import {composeWithDevTools} from 'redux-devtools-extension';
 
-import {persistStore} from 'redux-persist';
-
 import RootReducer from './rootReducer';
 
 const middleWare = [thunk];
