@@ -4,10 +4,10 @@ import AppInput from '../../Components/AppInput';
 import AppSeparator from '../../Components/AppSeparator';
 import ChatRow from '../../Components/ChatRow';
 
-export default function ChatScreen() {
+export default function ChatScreen({navigation}) {
   return (
     <View style={styles.screen}>
-      <AppInput placeholder="Search For users" />
+      <AppInput icon placeholder="Search For users" />
       <View style={styles.dist} />
       <FlatList
         data={items}
@@ -15,7 +15,7 @@ export default function ChatScreen() {
         renderItem={({item}) => (
           <ChatRow
             items={item}
-            // onPress={() => navigation.navigate('Channel', item)}
+            onPress={() => navigation.navigate('Channel', item)}
           />
         )}
         ItemSeparatorComponent={() => <AppSeparator />}

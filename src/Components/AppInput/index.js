@@ -17,7 +17,7 @@ const AppInput = ({
 }) => {
   return (
     <View style={styles.container}>
-      <AntDesign name="search1" size={24} color="gray" />
+      {icon && <AntDesign name="search1" size={24} color="gray" />}
       <TextInput
         onChangeText={onChangeText}
         style={[styles.inputText, style]}
@@ -25,14 +25,7 @@ const AppInput = ({
         placeholder={placeholder}
         {...otherProps}
       />
-      {endIcon && (
-        <EndIcon
-          name={endIcon}
-          size={24}
-          color={endColorIcon}
-          onPress={onIconPress}
-        />
-      )}
+      {EndIcon && <EndIcon {...otherProps} />}
     </View>
   );
 };
